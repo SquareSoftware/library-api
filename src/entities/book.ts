@@ -1,8 +1,6 @@
 import { Category } from "./category";
 import { BaseEntity } from "./core/base-entity";
-import { Rating } from "./rating";
-import { Rent } from "./rent";
-import { Send } from "./send";
+import { Price } from "./price";
 
 export class Book extends BaseEntity {
   pages!: number
@@ -13,19 +11,21 @@ export class Book extends BaseEntity {
 
   synopsis!: string
 
-  release!: string
+  release!: Date
 
   title!: string
 
-  rating!: Rating
+  rating!: string
 
-  send!: Send
+  send!: string
 
-  rent!: Rent
+  rent!: string
 
   category!: Category
 
   availability!: boolean
 
   ageIndication!: number
+
+  prices!: Price[]
 }

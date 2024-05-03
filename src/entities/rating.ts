@@ -1,9 +1,9 @@
-import { User } from "./user"
+import { BaseEntity } from "./core/base-entity"
 
-export class Rating {
-  book!: string
+export class Rating extends BaseEntity {
+  bookId!: string
 
-  user!: User
+  userId!: string
 
   value!: number
 
