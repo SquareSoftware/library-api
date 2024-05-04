@@ -15,15 +15,7 @@ export class Book extends BaseEntity {
 
   title!: string
 
-  rating!: string
-
-  send!: string
-
-  rent!: string
-
   category!: Category
-
-  availability!: boolean
 
   ageIndication!: number
 

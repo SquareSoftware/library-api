@@ -7,5 +7,5 @@ export class Price extends BaseEntity {
 
   value!: string
 
-  createAt!: Date
+  createdAt!: Date
 }
