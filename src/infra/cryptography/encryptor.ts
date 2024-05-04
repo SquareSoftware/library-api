@@ -1,6 +1,9 @@
+'reflect-metadata'
 import bcrypt from 'bcrypt' 
 import { IEncryptor } from './contracts/encryptor'
+import { injectable } from 'inversify'
 
+@injectable()
 export class Encryptor implements IEncryptor {
   private readonly SALT = 10
 
