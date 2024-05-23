@@ -1,11 +1,18 @@
 import { Command } from '../../entities/core/command'
 import { Email } from '../../entities/email'
 import { IRequest } from 'mediatr-ts'
+import { Phone } from '../../entities/phone'
 
 export interface ISignupPayload {
   email: string
 
   password: string
+
+  name: string
+
+  birth: Date
+
+  phone: string
 }
 
 export class SignupCommand implements Command<ISignupPayload>, IRequest<ISignupPayload> {
@@ -19,5 +26,6 @@ export class SignupCommand implements Command<ISignupPayload>, IRequest<ISignupP
 
   verify (): void {
     Email.create(this.payload.email)
+    Phone.create(this.payload.phone)
   }
 }

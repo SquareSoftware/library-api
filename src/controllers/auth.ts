@@ -1,14 +1,15 @@
-import { inject } from 'inversify'
 import { IMediator } from 'mediatr-ts'
 import { Controller, Route, Post, Body, SuccessResponse } from 'tsoa'
 import { ISignupPayload, SignupCommand } from '../commands/auth/signup'
+import { provideSingleton } from '../util/provide-singleton'
+import mediator from '../infra/mediator'
 
 @Route('auth')
+@provideSingleton(AuthController)
 export class AuthController extends Controller {
   private readonly _mediator: IMediator
 
   constructor (
-    @inject('Mediator') mediator: IMediator
   ) {
     super()
 

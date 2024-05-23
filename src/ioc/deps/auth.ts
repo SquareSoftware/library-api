@@ -1,8 +1,10 @@
 import { ContainerModule } from 'inversify'
-import { AuthCommandHandler } from '../../commands/auth/handler'
+import { IUserRepository } from '../../infra/repository/contracts/user'
+import { AuthDeps } from '../enums/auth'
+import { UserRepository } from '../../infra/repository/user'
 
 const authDeps = new ContainerModule(bind => {
-  bind(AuthCommandHandler).toSelf()
+  bind<IUserRepository>(AuthDeps.UserRepository).to(UserRepository)
 })
 
 export default authDeps

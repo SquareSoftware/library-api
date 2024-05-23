@@ -31,6 +31,8 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "inversify": "^6.0.2",
+    "inversify-binding-decorators": "^4.0.0",
+    "inversify-express-utils": "^6.4.6",
     "mediatr-ts": "^1.2.1",
     "mongoose": "^8.4.0",
     "reflect-metadata": "^0.2.2",
